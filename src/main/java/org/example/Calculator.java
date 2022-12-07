@@ -5,7 +5,7 @@ import static org.example.CalculatorUtils.*;
 
 public class Calculator {
     private String calculation;
-    private final String [] validCalculations = {"+", "-", "*", "/", "<", ">"};
+    private final String [] validCalculations = {"+", "-", "*", "/", "<", ">", "="};
 
     public void setCalculation(String symbol) {
         this.calculation = symbol;
@@ -40,6 +40,8 @@ public class Calculator {
             case "<":
                 result = squareRoot(num1, num2);
                 break;
+            case "=":
+                result = num2;
         }
         return result;
     }
